@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import styles from './styles/GameTable.module.css';
 
-class App extends Component {
+class GameTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,7 +40,7 @@ class App extends Component {
     }
 
     return (
-      <table>
+      <table className={styles['game-table']}>
         <thead>
           <tr>
             <th>Title</th>
@@ -83,7 +84,7 @@ class App extends Component {
   }
 }
 
-export default App;
+export default GameTable;
 
-const container = document.getElementById("app");
-render(<App />, container);
+const container = document.getElementById("game-table");
+render(<GameTable />, container);

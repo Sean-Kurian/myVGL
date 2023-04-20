@@ -1,1 +1,1 @@
-import App from "./components/App";
+import GameTable from "./components/GameTable";
