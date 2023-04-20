@@ -33,12 +33,12 @@ class User(models.Model):
 
 class Game(models.Model):
     title = models.CharField(max_length=255)
-    release_date = models.DateField()
-    summary = models.TextField()
-    publishers = models.ManyToManyField(Publisher)
-    developers = models.ManyToManyField(Developer)
-    platforms = models.ManyToManyField(Platform)
-    genres = models.ManyToManyField(Genre)
+    release_date = models.DateField(null=True)
+    summary = models.TextField(null=True)
+    publishers = models.ManyToManyField(Publisher, related_name='game')
+    developers = models.ManyToManyField(Developer, related_name='game')
+    platforms = models.ManyToManyField(Platform, related_name='game')
+    genres = models.ManyToManyField(Genre, related_name='game')
     slug = models.SlugField(unique=True, blank=True, max_length = 255)
 
     @property
