@@ -11,7 +11,26 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2">{% block left_sidebar %}{% endblock %}</div>
-    <div class="col-md-8">{% block main_content %}{% endblock %}</div>
+    <div class="col-md-8">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'index' %}">My Video Game List</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index' %}">All Games</a>
+                        </li>
+                        <!-- add other links here -->
+                    </ul>
+                    <!-- add other links here -->
+                </div>
+            </div>
+          </nav>
+        {% block main_content %}{% endblock %}
+    </div>
     <div class="col-md-2">{% block right_sidebar %}{% endblock %}</div>
   </div>
 </div>
