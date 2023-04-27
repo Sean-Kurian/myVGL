@@ -4,6 +4,7 @@ Need to add requirements.txt and figure out how to do node requirements, but for
 pip install django, djangorestframework, environ, Pillow, requests 
 
 in frontend/
+
 npm i webpack webpack-cli --save-dev
 
 npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
