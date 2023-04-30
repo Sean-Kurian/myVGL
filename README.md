@@ -1,7 +1,7 @@
 # myVGL
 
 Need to add requirements.txt and figure out how to do node requirements, but for now
-pip install django, djangorestframework, django-environ, Pillow, requests 
+pip install django, djangorestframework, django-environ, Pillow, requests, psycopg2-binary 
 
 in frontend/
 
